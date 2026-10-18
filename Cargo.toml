@@ -1,0 +1,16 @@
+[package]
+name = "sway-app-tabs"
+version = "0.1.0"
+edition = "2024"
+description = "Group new windows of chosen apps into one tabbed container in sway"
+license = "MIT"
+
+[dependencies]
+swayipc = "3"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
